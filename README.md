@@ -339,7 +339,9 @@ result = Validator().add_rule(NoWhitespaceRule("username")).validate(df)
 
 ---
 
-## Roadmap (v2)
+<details>
+<summary><strong>Roadmap (v2)</strong></summary>
+<br>
 
 - [ ] **Polars backend** — same checks, zero-copy columnar speed
 - [ ] **Time-series checks** — monotonicity, gaps, seasonality hints
@@ -351,6 +353,8 @@ result = Validator().add_rule(NoWhitespaceRule("username")).validate(df)
 - [ ] **CI/CD helpers** — `pytest` plugin and GitHub Actions example
 - [ ] **Async / streaming support** — chunked auditing for large files
 - [ ] **Configurable scoring presets** — e.g. `scoring="strict"` for medical data
+
+</details>
 
 ---
 
