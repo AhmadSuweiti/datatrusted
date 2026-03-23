@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "datatrusted"
-version = "0.1.0"
+version = "0.1.1"
 description = "A trust layer for tabular data — audit datasets before analysis or ML training."
 readme = "README.md"
 license = { text = "MIT" }
