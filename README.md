@@ -339,23 +339,6 @@ result = Validator().add_rule(NoWhitespaceRule("username")).validate(df)
 
 ---
 
-<details>
-<summary><strong>Roadmap (v2)</strong></summary>
-<br>
-
-- [ ] **Polars backend** — same checks, zero-copy columnar speed
-- [ ] **Time-series checks** — monotonicity, gaps, seasonality hints
-- [ ] **Schema versioning** — compare a DataFrame against a saved schema contract
-- [ ] **Column profiling** — full statistical summary (mean, std, percentiles, histogram bins)
-- [ ] **Pandas profiling integration** — optional deep-dive via `ydata-profiling`
-- [ ] **dbt integration** — run datatrust checks as dbt tests
-- [ ] **Great Expectations bridge** — export rules to GE expectations
-- [ ] **CI/CD helpers** — `pytest` plugin and GitHub Actions example
-- [ ] **Async / streaming support** — chunked auditing for large files
-- [ ] **Configurable scoring presets** — e.g. `scoring="strict"` for medical data
-
-</details>
-
 ---
 
 ## License
