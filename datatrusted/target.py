@@ -12,7 +12,7 @@ from typing import Optional
 
 import pandas as pd
 
-from datatrust.models import TargetInfo
+from datatrusted.models import TargetInfo
 
 # A target with ≤ this many unique values is treated as a classification target.
 _CLASSIFICATION_MAX_UNIQUE = 20

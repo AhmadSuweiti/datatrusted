@@ -1,5 +1,5 @@
 """
-Internal utility functions shared across datatrust modules.
+Internal utility functions shared across datatrusted modules.
 
 Nothing in here is part of the public API.
 """

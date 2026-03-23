@@ -1,10 +1,10 @@
 """
-datatrust — A trust layer for tabular data.
+datatrusted — A trust layer for tabular data.
 
 Quick start::
 
     import pandas as pd
-    from datatrust import audit, compare_splits, check_join, Validator
+    from datatrusted import audit, compare_splits, check_join, Validator
 
     df = pd.read_csv("data.csv")
 
@@ -29,10 +29,10 @@ Quick start::
     join_report = check_join(orders, customers, on="customer_id")
 """
 
-from datatrust.audit import audit
-from datatrust.drift import compare_splits
-from datatrust.joins import check_join
-from datatrust.models import (
+from datatrusted.audit import audit
+from datatrusted.drift import compare_splits
+from datatrusted.joins import check_join
+from datatrusted.models import (
     DriftReport,
     DuplicateInfo,
     JoinReport,
@@ -45,8 +45,8 @@ from datatrust.models import (
     TargetInfo,
     ValidationResult,
 )
-from datatrust.report import AuditReport
-from datatrust.rules import (
+from datatrusted.report import AuditReport
+from datatrusted.rules import (
     AllowedValuesRule,
     DateNotInFutureRule,
     NonNegativeRule,
@@ -58,7 +58,7 @@ from datatrust.rules import (
 )
 
 __version__ = "0.1.0"
-__author__ = "datatrust contributors"
+__author__ = "datatrusted contributors"
 
 __all__ = [
     # Main API

@@ -1,8 +1,8 @@
-# datatrust
+# datatrusted
 
 **A trust layer for tabular data.**
 
-`datatrust` helps analysts, data scientists, and ML engineers answer one question before training a model or running an analysis:
+`datatrusted` helps analysts, data scientists, and ML engineers answer one question before training a model or running an analysis:
 
 > **Can I trust this dataset?**
 
@@ -10,7 +10,7 @@ It audits a pandas DataFrame in one function call and returns a structured repor
 
 ---
 
-## Why datatrust?
+## Why datatrusted?
 
 Most data quality bugs surface late — after a model is in production, or after an analysis has been shared. The root causes are almost always things that could have been caught early:
 
@@ -20,7 +20,7 @@ Most data quality bugs surface late — after a model is in production, or after
 - A "feature" that's actually the outcome encoded post-event
 - A test set drawn from a different distribution than train
 
-`datatrust` makes these checks fast, consistent, and automated. It is not a dashboard, a data catalog, or a monitoring system. It is a library you call before you do anything else with a dataset.
+`datatrusted` makes these checks fast, consistent, and automated. It is not a dashboard, a data catalog, or a monitoring system. It is a library you call before you do anything else with a dataset.
 
 ---
 
@@ -44,14 +44,14 @@ Most data quality bugs surface late — after a model is in production, or after
 ## Installation
 
 ```bash
-pip install datatrust
+pip install datatrusted
 ```
 
 Or install from source:
 
 ```bash
-git clone https://github.com/yourusername/datatrust
-cd datatrust
+git clone https://github.com/yourusername/datatrusted
+cd datatrusted
 pip install -e ".[dev]"
 ```
 
@@ -65,7 +65,7 @@ pip install -e ".[dev]"
 
 ```python
 import pandas as pd
-from datatrust import audit
+from datatrusted import audit
 
 df = pd.read_csv("customers.csv")
 
@@ -87,7 +87,7 @@ report.to_markdown("audit_report.md")
 ### Custom validation rules
 
 ```python
-from datatrust import Validator, audit
+from datatrusted import Validator, audit
 
 validator = (
     Validator()
@@ -109,7 +109,7 @@ if not report.validation_result.is_valid:
 ### Train / test drift
 
 ```python
-from datatrust import compare_splits
+from datatrusted import compare_splits
 
 drift = compare_splits(train_df, test_df, target="label")
 
@@ -127,7 +127,7 @@ for d in drift.categorical_drifts:
 ### Join integrity
 
 ```python
-from datatrust import check_join
+from datatrusted import check_join
 
 report = check_join(orders_df, customers_df, on="customer_id")
 
@@ -220,7 +220,7 @@ Validator()
 
 ## Trust score
 
-The score starts at 100 and deducts points for detected issues. The table below shows the penalty logic, which lives in `datatrust/report.py` and is easy to adjust:
+The score starts at 100 and deducts points for detected issues. The table below shows the penalty logic, which lives in `datatrusted/report.py` and is easy to adjust:
 
 | Issue | Penalty |
 |---|---|
@@ -245,8 +245,8 @@ The minimum score is 0.
 ## Project structure
 
 ```
-datatrust/
-├── datatrust/
+datatrusted/
+├── datatrusted/
 │   ├── __init__.py       # Public API
 │   ├── audit.py          # Main audit() entrypoint
 │   ├── schema.py         # Schema / type checks
@@ -288,7 +288,7 @@ pip install -e ".[dev]"
 pytest
 
 # Run with coverage
-pytest --cov=datatrust --cov-report=term-missing
+pytest --cov=datatrusted --cov-report=term-missing
 
 # Run a specific test file
 pytest tests/test_rules.py -v
@@ -305,11 +305,11 @@ Contributions are welcome. A few guidelines:
 3. Write tests for every new check.
 4. Keep the public API small and stable.
 
-To add a custom rule, subclass `datatrust.rules.Rule`:
+To add a custom rule, subclass `datatrusted.rules.Rule`:
 
 ```python
-from datatrust.rules import Rule, Validator
-from datatrust.models import RuleViolation
+from datatrusted.rules import Rule, Validator
+from datatrusted.models import RuleViolation
 from typing import Optional
 import pandas as pd
 

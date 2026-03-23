@@ -6,8 +6,8 @@ import numpy as np
 import pandas as pd
 import pytest
 
-from datatrust import audit, Validator
-from datatrust.report import AuditReport
+from datatrusted import audit, Validator
+from datatrusted.report import AuditReport
 
 
 @pytest.fixture

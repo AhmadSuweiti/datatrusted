@@ -21,8 +21,8 @@ from typing import List, Optional
 
 import pandas as pd
 
-from datatrust.models import LeakageHint
-from datatrust.utils import numeric_columns
+from datatrusted.models import LeakageHint
+from datatrusted.utils import numeric_columns
 
 # Column name fragments that suggest the column encodes the outcome.
 _SUSPICIOUS_NAME_PATTERNS = [

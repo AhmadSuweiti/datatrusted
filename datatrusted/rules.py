@@ -3,13 +3,13 @@ Rule-based validation system.
 
 Provides a fluent ``Validator`` builder and a set of built-in rules.
 Rules can be composed and run against any pandas DataFrame to produce
-structured :class:`~datatrust.models.ValidationResult` objects.
+structured :class:`~datatrusted.models.ValidationResult` objects.
 
 Example
 -------
 ::
 
-    from datatrust import Validator
+    from datatrusted import Validator
 
     result = (
         Validator()
@@ -34,8 +34,8 @@ from typing import Any, List, Optional, Union
 
 import pandas as pd
 
-from datatrust.models import RuleViolation, ValidationResult
-from datatrust.utils import safe_sample
+from datatrusted.models import RuleViolation, ValidationResult
+from datatrusted.utils import safe_sample
 
 Number = Union[int, float]
 

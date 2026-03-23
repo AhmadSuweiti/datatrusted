@@ -1,4 +1,4 @@
-"""Tests for datatrust.target."""
+"""Tests for datatrusted.target."""
 
 from __future__ import annotations
 
@@ -6,7 +6,7 @@ import numpy as np
 import pandas as pd
 import pytest
 
-from datatrust.target import analyze_target
+from datatrusted.target import analyze_target
 
 
 class TestAnalyzeTarget:

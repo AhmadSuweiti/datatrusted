@@ -11,7 +11,7 @@ from typing import List
 
 import pandas as pd
 
-from datatrust.models import MissingInfo
+from datatrusted.models import MissingInfo
 
 _DEFAULT_THRESHOLD = 0.05  # 5 %
 

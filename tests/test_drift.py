@@ -1,4 +1,4 @@
-"""Tests for datatrust.drift."""
+"""Tests for datatrusted.drift."""
 
 from __future__ import annotations
 
@@ -6,7 +6,7 @@ import numpy as np
 import pandas as pd
 import pytest
 
-from datatrust.drift import compare_splits
+from datatrusted.drift import compare_splits
 
 
 def _make_train_test(n_train=500, n_test=200, seed=42):
@@ -35,7 +35,7 @@ class TestCompareSplits:
     def test_returns_drift_report(self):
         train, test = _make_train_test()
         report = compare_splits(train, test)
-        from datatrust.models import DriftReport
+        from datatrusted.models import DriftReport
         assert isinstance(report, DriftReport)
 
     def test_shapes_recorded(self):

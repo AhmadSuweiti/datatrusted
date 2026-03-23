@@ -1,8 +1,8 @@
 """
 Main audit entrypoint.
 
-:func:`audit` is the primary public function of datatrust. It orchestrates
-all checks and returns a single :class:`~datatrust.report.AuditReport`.
+:func:`audit` is the primary public function of datatrusted. It orchestrates
+all checks and returns a single :class:`~datatrusted.report.AuditReport`.
 """
 
 from __future__ import annotations
@@ -11,15 +11,15 @@ from typing import List, Optional
 
 import pandas as pd
 
-from datatrust.duplicates import analyze_duplicates
-from datatrust.leakage import analyze_leakage
-from datatrust.missing import analyze_missing
-from datatrust.models import ValidationResult
-from datatrust.outliers import analyze_outliers
-from datatrust.report import AuditReport
-from datatrust.rules import Validator
-from datatrust.schema import analyze_schema
-from datatrust.target import analyze_target
+from datatrusted.duplicates import analyze_duplicates
+from datatrusted.leakage import analyze_leakage
+from datatrusted.missing import analyze_missing
+from datatrusted.models import ValidationResult
+from datatrusted.outliers import analyze_outliers
+from datatrusted.report import AuditReport
+from datatrusted.rules import Validator
+from datatrusted.schema import analyze_schema
+from datatrusted.target import analyze_target
 
 
 def audit(
@@ -34,10 +34,10 @@ def audit(
 ) -> AuditReport:
     """Run a full audit on a tabular DataFrame.
 
-    This is the main entrypoint for datatrust. It runs schema checks,
+    This is the main entrypoint for datatrusted. It runs schema checks,
     missing-value analysis, duplicate detection, outlier detection, target
     analysis, and optional leakage hints, then returns a single
-    :class:`~datatrust.report.AuditReport`.
+    :class:`~datatrusted.report.AuditReport`.
 
     Parameters
     ----------
@@ -56,10 +56,10 @@ def audit(
         Fraction (0–1). Columns with more than this fraction of missing
         values are flagged. Default is ``0.05`` (5 %).
     validator:
-        An optional pre-configured :class:`~datatrust.rules.Validator` to
+        An optional pre-configured :class:`~datatrusted.rules.Validator` to
         run against the DataFrame. Build one with the fluent API::
 
-            from datatrust import Validator
+            from datatrusted import Validator
             v = Validator().not_null("email").unique("user_id")
             report = audit(df, validator=v)
 
@@ -77,7 +77,7 @@ def audit(
     ::
 
         import pandas as pd
-        from datatrust import audit
+        from datatrusted import audit
 
         df = pd.read_csv("customers.csv")
         report = audit(df, target="churn", id_columns=["customer_id"])

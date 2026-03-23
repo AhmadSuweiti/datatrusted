@@ -11,7 +11,7 @@ from typing import List, Optional
 
 import pandas as pd
 
-from datatrust.models import DuplicateInfo
+from datatrusted.models import DuplicateInfo
 
 
 def analyze_duplicates(

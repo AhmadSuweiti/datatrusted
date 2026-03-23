@@ -1,11 +1,11 @@
-"""Tests for datatrust.rules — Validator and all built-in rules."""
+"""Tests for datatrusted.rules — Validator and all built-in rules."""
 
 from __future__ import annotations
 
 import pandas as pd
 import pytest
 
-from datatrust.rules import (
+from datatrusted.rules import (
     AllowedValuesRule,
     DateNotInFutureRule,
     NonNegativeRule,
@@ -228,7 +228,7 @@ class TestValidator:
         assert v.rule_count == 3
 
     def test_custom_rule_via_add_rule(self):
-        from datatrust.rules import NotNullRule
+        from datatrusted.rules import NotNullRule
         df = pd.DataFrame({"x": [1, None]})
         result = Validator().add_rule(NotNullRule("x")).validate(df)
         assert not result.is_valid

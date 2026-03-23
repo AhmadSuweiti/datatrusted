@@ -12,7 +12,7 @@ from typing import List, Union
 
 import pandas as pd
 
-from datatrust.models import JoinReport
+from datatrusted.models import JoinReport
 
 
 def check_join(

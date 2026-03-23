@@ -12,8 +12,8 @@ from typing import List, Optional
 
 import pandas as pd
 
-from datatrust.models import SchemaIssue, SchemaReport
-from datatrust.utils import (
+from datatrusted.models import SchemaIssue, SchemaReport
+from datatrusted.utils import (
     categorical_columns,
     is_likely_datetime_string,
     is_likely_numeric_string,

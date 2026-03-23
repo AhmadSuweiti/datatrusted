@@ -53,7 +53,7 @@ Repository = "https://github.com/AhmadSuweiti/datatrusted"
 Issues = "https://github.com/AhmadSuweiti/datatrusted/issues"
 
 [tool.hatch.build.targets.wheel]
-packages = ["datatrust"]
+packages = ["datatrusted"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

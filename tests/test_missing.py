@@ -1,11 +1,11 @@
-"""Tests for datatrust.missing."""
+"""Tests for datatrusted.missing."""
 
 from __future__ import annotations
 
 import pandas as pd
 import pytest
 
-from datatrust.missing import analyze_missing, missing_summary_table
+from datatrusted.missing import analyze_missing, missing_summary_table
 
 
 class TestAnalyzeMissing:

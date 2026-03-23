@@ -1,11 +1,11 @@
-"""Tests for datatrust.joins."""
+"""Tests for datatrusted.joins."""
 
 from __future__ import annotations
 
 import pandas as pd
 import pytest
 
-from datatrust.joins import check_join
+from datatrusted.joins import check_join
 
 
 class TestCheckJoin:

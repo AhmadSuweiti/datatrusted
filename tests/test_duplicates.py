@@ -1,11 +1,11 @@
-"""Tests for datatrust.duplicates."""
+"""Tests for datatrusted.duplicates."""
 
 from __future__ import annotations
 
 import pandas as pd
 import pytest
 
-from datatrust.duplicates import analyze_duplicates
+from datatrusted.duplicates import analyze_duplicates
 
 
 class TestAnalyzeDuplicates:

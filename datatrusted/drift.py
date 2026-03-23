@@ -20,8 +20,8 @@ from typing import List, Optional
 
 import pandas as pd
 
-from datatrust.models import DriftInfo, DriftReport
-from datatrust.utils import categorical_columns, numeric_columns
+from datatrusted.models import DriftInfo, DriftReport
+from datatrusted.utils import categorical_columns, numeric_columns
 
 # Numeric: flag when mean shift exceeds this many training std deviations.
 _NUMERIC_SHIFT_THRESHOLD = 0.5

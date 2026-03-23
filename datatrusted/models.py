@@ -1,5 +1,5 @@
 """
-Dataclass models for all datatrust result objects.
+Dataclass models for all datatrusted result objects.
 
 These are the structured return types for every audit, check, and report
 in the library. All are plain dataclasses — no heavy dependencies.

@@ -1,4 +1,4 @@
-"""Shared fixtures for datatrust tests."""
+"""Shared fixtures for datatrusted tests."""
 
 from __future__ import annotations
 

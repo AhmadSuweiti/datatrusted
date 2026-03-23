@@ -1,4 +1,4 @@
-"""Tests for datatrust.report — AuditReport, scoring, and export."""
+"""Tests for datatrusted.report — AuditReport, scoring, and export."""
 
 from __future__ import annotations
 
@@ -10,7 +10,7 @@ import numpy as np
 import pandas as pd
 import pytest
 
-from datatrust import audit
+from datatrusted import audit
 
 
 def _make_clean_df(n=100):
@@ -87,7 +87,7 @@ class TestAuditReport:
         report = audit(df)
         md = report.to_markdown()
         assert isinstance(md, str)
-        assert "# datatrust" in md
+        assert "# datatrusted" in md
         assert "Trust Score" in md
 
     def test_to_markdown_writes_file(self):
@@ -109,7 +109,7 @@ class TestAuditReport:
         html = report.to_html()
         assert isinstance(html, str)
         assert "<!DOCTYPE html>" in html
-        assert "datatrust" in html
+        assert "datatrusted" in html
 
     def test_to_html_writes_file(self):
         df = _make_clean_df()
@@ -155,7 +155,7 @@ class TestAuditReport:
         assert report.validation_result is None
 
     def test_validation_result_populated_with_validator(self):
-        from datatrust import Validator
+        from datatrusted import Validator
         df = _make_clean_df()
         v = Validator().not_null("id").unique("id")
         report = audit(df, validator=v)

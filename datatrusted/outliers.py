@@ -12,8 +12,8 @@ from typing import List
 
 import pandas as pd
 
-from datatrust.models import OutlierInfo
-from datatrust.utils import numeric_columns
+from datatrusted.models import OutlierInfo
+from datatrusted.utils import numeric_columns
 
 _IQR_MULTIPLIER = 1.5
 
