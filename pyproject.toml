@@ -3,14 +3,14 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "datatrust"
+name = "datatrusted"
 version = "0.1.0"
 description = "A trust layer for tabular data — audit datasets before analysis or ML training."
 readme = "README.md"
 license = { text = "MIT" }
 requires-python = ">=3.9"
 authors = [
-    { name = "datatrust contributors" },
+    { name = "Ahmad Suweiti" },
 ]
 keywords = [
     "data quality",
@@ -48,9 +48,9 @@ dev = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/yourusername/datatrust"
-Repository = "https://github.com/yourusername/datatrust"
-Issues = "https://github.com/yourusername/datatrust/issues"
+Homepage = "https://github.com/AhmadSuweiti/datatrusted"
+Repository = "https://github.com/AhmadSuweiti/datatrusted"
+Issues = "https://github.com/AhmadSuweiti/datatrusted/issues"
 
 [tool.hatch.build.targets.wheel]
 packages = ["datatrust"]
