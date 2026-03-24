@@ -50,7 +50,7 @@ pip install datatrusted
 Or install from source:
 
 ```bash
-git clone https://github.com/yourusername/datatrusted
+git clone https://github.com/AhmadSuweiti/datatrusted
 cd datatrusted
 pip install -e ".[dev]"
 ```
